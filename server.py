@@ -184,6 +184,7 @@ def cache_response(timeout=5):
 
 @app.before_request
 def check_access_token():
+    return None
     # 排除静态资源
     if request.path.startswith('/static'):
         return None
